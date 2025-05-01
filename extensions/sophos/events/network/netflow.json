@@ -1,0 +1,22 @@
+{
+    "uid": 5,
+    "caption": "Netflow",
+    "category": "network",
+    "description": "The Netflow describes point-to-point network comms between a source and destination endpoint sharing a network 5-tuple.",
+    "extends": "base_event",
+    "name": "netflow",
+    "attributes": {
+        "activity_id": {
+            "enum": {
+                "1": {
+                    "caption": "Connect",
+                    "description": "A new flow connection was established."
+                },
+                "2": {
+                    "caption": "Disconnect",
+                    "description": "The flow was disconnected."
+                }
+            }
+        }
+    }
+}

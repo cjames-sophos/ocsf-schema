@@ -1,0 +1,24 @@
+{
+    "caption": "IOC Event",
+    "description": "Triggering Event for IOC based detection.",
+    "name": "ioc_event",
+    "extends": "object",
+    "attributes": {
+        "path": {
+            "requirement": "required",
+            "description": "Path to the source of the detection."
+        },
+        "sophos_tid": {
+            "requirement": "required"
+        },
+        "time": {
+            "requirement": "required"
+        },
+        "time_nanos": {
+            "requirement": "recommended"
+        },
+        "threat_source": {
+            "requirement": "recommended"
+        }
+    }
+}

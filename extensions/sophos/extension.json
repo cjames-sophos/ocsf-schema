@@ -1,0 +1,7 @@
+{
+    "uid": 500,
+    "caption": "Sophos",
+    "description": "The Sophos extension defines Sophos specific attributes, objects, classes and profiles.",
+    "name": "sophos",
+    "version": "0.0.1"
+}

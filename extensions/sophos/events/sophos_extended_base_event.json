@@ -1,0 +1,15 @@
+{
+    "caption": "Sophos Extended Base Event",
+    "description": "The base event is a generic and concrete event. It also defines a set of attributes available in most event classes. As a generic event that does not belong to any event category, it could be used to log events that are not otherwise defined by the schema.",
+    "extends": "base_event",
+    "attributes": {
+        "event_time_fidelity": {
+            "group": "occurrence",
+            "requirement": "optional"
+        },
+        "resource_id": {
+            "group": "context",
+            "requirement": "required"
+        }
+    }
+}

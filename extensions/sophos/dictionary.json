@@ -1,0 +1,208 @@
+{
+    "caption": "Attribute Dictionary",
+    "description": "The Attribute Dictionary defines schema attributes and includes references to the events and objects in which they are used.",
+    "name": "dictionary",
+    "attributes": {
+        "associated_lineage": {
+            "caption": "Process Lineage",
+            "description": "The lineage of the process, represented by a list of paths for each ancestor process.",
+            "type": "process_lineage"
+        },
+        "destination_address": {
+            "caption": "Destination Address",
+            "description": "The destination IP address associated with a network endpoint.",
+            "type": "string_t"
+        },
+        "event_data": {
+            "caption": "Event Data",
+            "description": "The event data associated with the technique.  Varies by technique.",
+            "type": "json_t",
+            "is_array": true
+        },
+        "depth": {
+            "caption": "Depth",
+            "description": "The depth of the process in the process lineage (e.g.)",
+            "type": "integer_t"
+        },
+        "download_url": {
+            "caption": "Source URL",
+            "description": "The URL from which an entity was downloaded.",
+            "type": "url_t"
+        },
+        "event_time_fidelity": {
+            "group": "occurrence",
+            "type": "integer_t",
+            "enum": {
+                "0": {
+                    "caption": "UNKNOWN"
+                },
+                "1": {
+                    "caption": "SECONDS"
+                },
+                "2": {
+                    "caption": "MILLISECONDS"
+                },
+                "3": {
+                    "caption": "NANOSECONDS"
+                },
+                "4": {
+                    "caption": "MICROSECONDS"
+                },
+                "99": {
+                    "caption": "OTHER"
+                }
+            }
+        },
+        "ioc_events": {
+            "caption": "IOC Events",
+            "description": "The list of IOC events associated with the event.",
+            "type": "ioc_event",
+            "is_array": true
+        },
+        "username": {
+            "caption": "IOC Username",
+            "description": "Override me.",
+            "type": "username_t"
+        },
+        "name_truncated": {
+            "caption": "Process Name Truncated",
+            "description": "Is the process_name truncated?",
+            "type": "boolean_t",
+            "requirement": "recommended"
+        },
+        "original_data": {
+            "caption": "Original Data",
+            "description": "The original data associated with the event.",
+            "type": "string_t"
+        },
+        "primary_ttp": {
+            "caption": "Primary TTP",
+            "description": "The primary TTP associated with the runtime technique.",
+            "type": "string_t"
+        },
+        "process_ml_score": {
+            "caption": "Process ML Score",
+            "description": "The machine learning score associated with the process.",
+            "type": "integer_t"
+        },
+        "process_local_rep": {
+            "caption": "Process Local Reputation",
+            "description": "The local reputation score associated with the process.",
+            "type": "integer_t"
+        },
+        "process_local_rep_signers": {
+            "caption": "Process Local Reputation Signers",
+            "description": "The local reputation signers associated with the process.",
+            "type": "string_t",
+            "is_array": true
+        },
+        "process_pua_score": {
+            "caption": "Process PUA Score",
+            "description": "The potentially unwanted application score associated with the process.",
+            "type": "integer_t"
+        },
+        "process_global_rep": {
+            "caption": "Process Global Reputation",
+            "description": "The global reputation score associated with the process.",
+            "type": "integer_t"
+        },
+        "resource_id": {
+            "caption": "Taegis Platform Resource ID",
+            "description": "A identifier used for all events in the Taegis system.",
+            "type": "string_t"
+        },
+        "runtime_iocs": {
+            "caption": "Runtime IOCs",
+            "description": "The runtime IOCs associated with the event.",
+            "type": "runtime_ioc",
+            "is_array": true
+        },
+        "runtime_techniques": {
+            "caption": "Runtime Techniques",
+            "description": "The runtime techniques associated with the event.",
+            "type": "runtime_technique",
+            "is_array": true
+        },
+        "sensor_type": {
+            "caption": "Sensor Type",
+            "description": "The type of sensor that generated the event.",
+            "type": "string_t"
+        },
+        "source_address": {
+            "caption": "Source Address",
+            "description": "The source IP address associated with a network endpoint.",
+            "type": "string_t"
+        },
+        "sophos_pid": {
+            "caption": "Sophos Process ID",
+            "description": "The Sophos process ID associated with the event.",
+            "type": "string_t"
+        },
+        "sophos_tid": {
+            "caption": "Sophos Thread ID",
+            "description": "The Sophos thread ID associated with the event.",
+            "type": "string_t"
+        },
+        "subcategory": {
+            "caption": "Subcategory",
+            "description": "The subcategory of the event.",
+            "type": "string_t"
+        },
+        "process": {
+            "caption": "Initiating Process",
+            "description": "The target process associated with the event.",
+            "type": "process"
+        },
+        "tenant_id": {
+            "caption": "Taegis Platform Tenant ID",
+            "description": "The ID of the Taegis platform tenant associated with this event.",
+            "type": "integer_t"
+        },
+        "threat_source_id": {
+            "caption": "Threat Source ID",
+            "description": "The identifier of the threat source.",
+            "type": "integer_t",
+            "enum": {
+                "0": {
+                    "caption": "Unknown"
+                },
+                "1": {
+                    "caption": "Behavioral"
+                },
+                "2": {
+                    "caption": "AMSI"
+                },
+                "3": {
+                    "caption": "VDL"
+                },
+                "99": {
+                    "caption": "Other"
+                }
+            }
+        },
+        "threat_source": {
+            "caption": "Threat Source",
+            "description": "The source of the threat.",
+            "sibling": "threat_source_id",
+            "type": "string_t"
+        },
+        "time_nanos": {
+            "caption": "Event Time in Nanoseconds",
+            "description": "The time of the event in nanoseconds since the epoch.",
+            "type": "timestamp_nanos_t",
+            "requirement": "required"
+        }
+    },
+    "types": {
+        "caption": "Data Types",
+        "description": "The data types available in OCSF. Each data type specifies constraints in the form regular expressions, max lengths or value limits. Implementors of OCSF should ensure they abide to these constraints.",
+        "attributes": {
+            "timestamp_nanos_t": {
+                "caption": "Timestamp with nanosecond precision",
+                "description": "The timestamp format is the number of nanoseconds since the Epoch 01/01/1970 00:00:00 UTC. For example:<br><code>1737642869398696192</code>.",
+                "type": "long_t",
+                "type_name": "Long"
+            }
+        }
+    }
+}

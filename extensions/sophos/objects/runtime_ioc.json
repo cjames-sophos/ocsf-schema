@@ -1,0 +1,24 @@
+{
+    "caption": "Runtime IOC",
+    "description": "Runtime IOCs that are identified by Sophos endpoint technology.",
+    "name": "runtime_ioc",
+    "extends": "object",
+    "attributes": {
+        "detection_uid": {
+            "requirement": "required"
+        },
+        "ioc_events": {
+            "requirement": "required"
+        },
+        "threat_source_id": {
+            "requirement": "required"
+        },
+        "threat_source": {
+            "requirement": "recommended"
+        },
+        "username": {
+            "requirement": "recommended",
+            "description": "The username associated with the IOC."
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "uid": 6,
+    "caption": "DNS Query",
+    "category": "network",
+    "description": "A DNS Query along with optional response data.",
+    "extends": "base_event",
+    "name": "dnsquery",
+    "attributes": {
+        "response_record": {
+            "caption": "Response Code ID",
+            "type": "integer_t",
+            "group": "primary",
+            "requirement": "required",
+            "enum": {
+                "0": {
+                    "caption": "NoError",
+                    "description": "No Error."
+                },
+                "1": {
+                    "caption": "FormError",
+                    "description": "Format Error."
+                },
+                "2": {
+                    "caption": "ServError",
+                    "description": "Server Failure."
+                },
+                "99": {
+                    "caption": "Other",
+                    "description": "Other."
+                }
+            }
+        }
+    },
+    "profiles": []
+}

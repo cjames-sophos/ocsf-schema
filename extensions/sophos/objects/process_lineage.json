@@ -1,0 +1,16 @@
+{
+    "description": "Proces Lineage from current process to root process of current boot session.",
+    "caption": "Process Lineage.",
+    "name": "process_lineage",
+    "attributes": {
+        "ancestry": {
+            "requirement": "required"
+        },
+        "depth": {
+            "requirement": "required"
+        },
+        "sophos_pid": {
+            "requirement": "required"
+        }
+    }
+}

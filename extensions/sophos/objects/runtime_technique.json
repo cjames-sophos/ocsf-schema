@@ -1,0 +1,37 @@
+{
+    "caption": "Runtime Techniques",
+    "description": "Runtime Techniques that are identified by Sophos endpoint technology.",
+    "name": "runtime_technique",
+    "extends": "object",
+    "attributes": {
+        "associated_lineage": {
+            "requirement": "required",
+            "description": "Processs Lineage from initiating process to root process."
+        },
+        "attacks": {
+            "requirement": "recommended",
+            "description": "List of attack techniques that are associated with the runtime technique."
+        },
+        "event_data": {
+            "requirement": "required",
+            "description": "Event data associated with the runtime technique."
+        },
+        "subcategory": {
+            "requirement": "required"
+        },
+        "file": {
+            "requirement": "optional",
+            "description": "File that the technique applies to."
+        },
+        "process": {
+            "requirement": "optional"
+        },
+        "parent_process": {
+            "requirement": "recommended"
+        },
+        "primary_ttp": {
+            "requirement": "required",
+            "description": "Primary TTP associated with the runtime technique."
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "description": "Runtime Activity Scoring Info",
+    "caption": "ScoringInfo",
+    "name": "scoring_info",
+    "extends": "object",
+    "attributes": {
+        "process_ml_score": {
+            "requirement": "required"
+        },
+        "process_pua_score": {
+            "requirement": "required"
+        },
+        "process_local_rep": {
+            "requirement": "required"
+        },
+        "process_global_rep": {
+            "requirement": "required"
+        },
+        "process_local_rep_signers": {
+            "requirement": "recommended"
+        }
+    }
+}

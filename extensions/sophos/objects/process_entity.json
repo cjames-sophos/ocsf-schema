@@ -1,0 +1,13 @@
+{
+    "caption": "Process Entity Extension",
+    "description": "Core Process Attributes.",
+    "extends": "process_entity",
+    "attributes": {
+        "name_truncated": {
+            "requirement": "recommended"
+        },
+        "name": {
+            "requirement": "required"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "uid": 1,
+    "caption": "Registry",
+    "category": "system",
+    "description": "A Registry Modification was detected.",
+    "extends": "base_event",
+    "name": "registry",
+    "attributes": {},
+    "profiles": []
+}

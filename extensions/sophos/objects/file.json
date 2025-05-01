@@ -1,0 +1,10 @@
+{
+    "caption": "File Object",
+    "description": "Core File Attributes.",
+    "extends": "file",
+    "attributes": {
+        "download_url": {
+            "requirement": "optional"
+        }
+    }
+}
