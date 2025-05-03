@@ -1,0 +1,7 @@
+{
+    "uid": 500,
+    "caption": "Taegis",
+    "description": "The Taegis extension defines Taegis specific attributes, objects, classes and profiles.",
+    "name": "taegis",
+    "version": "0.0.1"
+}

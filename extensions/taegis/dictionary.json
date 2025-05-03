@@ -70,6 +70,21 @@
             "type": "boolean_t",
             "requirement": "recommended"
         },
+        "normalizer": {
+            "caption": "Normalizer",
+            "description": "The normalizer that generated the event.",
+            "type": "string_t"
+        },
+        "normalizer_revision": {
+            "caption": "Normalizer Revision",
+            "description": "The version of the normalizer that generated the event.",
+            "type": "string_t"
+        },
+        "normalizer_version": {
+            "caption": "Normalizer Version",
+            "description": "The version of the normalizer that generated the event.",
+            "type": "string_t"
+        },
         "original_data": {
             "caption": "Original Data",
             "description": "The original data associated with the event.",
@@ -80,34 +95,54 @@
             "description": "The primary TTP associated with the runtime technique.",
             "type": "string_t"
         },
-        "process_ml_score": {
-            "caption": "Process ML Score",
+        "process_correlation_id": {
+            "caption": "Process Correlation ID",
+            "description": "The correlation ID associated with the process.",
+            "type": "string_t"
+        },
+        "process_create_time_usec": {
+            "caption": "Process Create Time",
+            "description": "The time the process was created in microseconds since the epoch.",
+            "type": "long_t"
+        },
+        "process_id": {
+            "caption": "Process ID",
+            "description": "Identifier provided by the OS for the running process.",
+            "type": "string_t"
+        },
+        "process_image_path": {
+            "caption": "Process Image Path",
+            "description": "Full path to the process binary.",
+            "type": "string_t"
+        },
+        "ml_score": {
+            "caption": "ML Score",
             "description": "The machine learning score associated with the process.",
             "type": "integer_t"
         },
-        "process_local_rep": {
-            "caption": "Process Local Reputation",
+        "local_rep": {
+            "caption": "Local Reputation",
             "description": "The local reputation score associated with the process.",
             "type": "integer_t"
         },
-        "process_local_rep_signers": {
-            "caption": "Process Local Reputation Signers",
+        "local_rep_signers": {
+            "caption": "Local Reputation Signers",
             "description": "The local reputation signers associated with the process.",
             "type": "string_t",
             "is_array": true
         },
-        "process_pua_score": {
-            "caption": "Process PUA Score",
+        "pua_score": {
+            "caption": "PUA Score",
             "description": "The potentially unwanted application score associated with the process.",
             "type": "integer_t"
         },
-        "process_global_rep": {
-            "caption": "Process Global Reputation",
+        "global_rep": {
+            "caption": "Global Reputation",
             "description": "The global reputation score associated with the process.",
             "type": "integer_t"
         },
         "resource_id": {
-            "caption": "Taegis Platform Resource ID",
+            "caption": "Taegis Event UID",
             "description": "A identifier used for all events in the Taegis system.",
             "type": "string_t"
         },

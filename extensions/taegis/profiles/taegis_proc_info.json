@@ -1,0 +1,20 @@
+{
+    "caption": "Taegis Process Activity",
+    "description": "The attributes that all telemetry associated to a process should have.",
+    "meta": "profile",
+    "name": "taegis_proc_related_telemetry",
+    "attributes": {
+        "process_correlation_id": {
+            "requirement": "required"
+        },
+        "process_create_time_usec": {
+            "requirement": "required"
+        },
+        "process_id": {
+            "requirement": "required"
+        },
+        "process_image_path": {
+            "requirement": "recommended"
+        }
+    }
+}

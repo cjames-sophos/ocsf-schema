@@ -1,0 +1,69 @@
+{
+    "caption": "Taegis Base Event",
+    "category": "other",
+    "uid": 0,
+    "description": "The new base event is a generic and concrete event. It also defines a set of attributes available in most event classes. As a generic event that does not belong to any event category, it could be used to log events that are not otherwise defined by the schema.",
+    "name": "taegis_base_event",
+    "attributes": {
+        "$include": [
+            "profiles/cloud.json",
+            "profiles/datetime.json",
+            "profiles/host.json",
+            "profiles/osint.json",
+            "profiles/security_control.json"
+        ],
+        "activity_id": {
+            "group": "classification",
+            "requirement": "required",
+            "enum": {
+                "0": {
+                    "caption": "Unknown"
+                },
+                "99": {
+                    "caption": "Other"
+                }
+            }
+        },
+        "category_name": {
+            "group": "classification",
+            "requirement": "optional"
+        },
+        "category_uid": {
+            "group": "classification",
+            "requirement": "required",
+            "enum": {
+                "0": {
+                    "caption": "Uncategorized"
+                }
+            }
+        },
+        "class_name": {
+            "group": "classification",
+            "requirement": "optional"
+        },
+        "class_uid": {
+            "group": "classification",
+            "requirement": "required",
+            "enum": {
+                "0": {
+                    "caption": "Base Event"
+                }
+            }
+        },
+        "severity_id": {
+            "group": "classification",
+            "requirement": "required"
+        },
+        "type_uid": {
+            "group": "classification",
+            "requirement": "required"
+        }
+    },
+    "profiles": [
+        "cloud",
+        "datetime",
+        "host",
+        "osint",
+        "security_control"
+    ]
+}

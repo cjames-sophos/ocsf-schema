@@ -3,7 +3,7 @@
     "caption": "Netflow",
     "category": "network",
     "description": "The Netflow describes point-to-point network comms between a source and destination endpoint sharing a network 5-tuple.",
-    "extends": "base_event",
+    "extends": "taegis_base_event",
     "name": "netflow",
     "attributes": {
         "activity_id": {

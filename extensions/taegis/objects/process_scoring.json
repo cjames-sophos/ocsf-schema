@@ -4,19 +4,19 @@
     "name": "scoring_info",
     "extends": "object",
     "attributes": {
-        "process_ml_score": {
+        "ml_score": {
             "requirement": "required"
         },
-        "process_pua_score": {
+        "pua_score": {
             "requirement": "required"
         },
-        "process_local_rep": {
+        "local_rep": {
             "requirement": "required"
         },
-        "process_global_rep": {
+        "global_rep": {
             "requirement": "required"
         },
-        "process_local_rep_signers": {
+        "local_rep_signers": {
             "requirement": "recommended"
         }
     }

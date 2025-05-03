@@ -3,7 +3,7 @@
     "caption": "DNS Query",
     "category": "network",
     "description": "A DNS Query along with optional response data.",
-    "extends": "base_event",
+    "extends": "taegis_base_event",
     "name": "dnsquery",
     "attributes": {
         "response_record": {

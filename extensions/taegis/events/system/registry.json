@@ -3,7 +3,7 @@
     "caption": "Registry",
     "category": "system",
     "description": "A Registry Modification was detected.",
-    "extends": "base_event",
+    "extends": "taegis_host_event",
     "name": "registry",
     "attributes": {},
     "profiles": []

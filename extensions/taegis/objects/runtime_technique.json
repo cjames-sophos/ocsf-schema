@@ -1,5 +1,5 @@
 {
-    "caption": "Runtime Techniques",
+    "caption": "Runtime Technique",
     "description": "Runtime Techniques that are identified by Sophos endpoint technology.",
     "name": "runtime_technique",
     "extends": "object",

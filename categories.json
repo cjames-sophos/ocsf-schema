@@ -37,11 +37,6 @@
       "uid": 1,
       "caption": "System Activity",
       "description": "System Activity events."
-    },
-    "unmanned_systems": {
-      "uid": 8,
-      "caption": "Unmanned Systems",
-      "description": "Unmanned Systems events report the activity, existence, and/or state of unmanned systems for tracking, mission planning, and other related activities."
     }
   }
 }

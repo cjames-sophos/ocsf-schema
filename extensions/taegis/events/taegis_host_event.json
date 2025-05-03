@@ -1,0 +1,28 @@
+{
+    "caption": "Taegis Host Event",
+    "description": "Common fields found on all raw telemetry events collected on a host computer.",
+    "extends": "taegis_base_event",
+    "name": "taegis_host_event",
+    "attributes": {
+        "event_time_fidelity": {
+            "group": "occurrence",
+            "requirement": "optional"
+        },
+        "resource_id": {
+            "group": "context",
+            "requirement": "required"
+        },
+        "process_correlation_id": {
+            "requirement": "required"
+        },
+        "process_create_time_usec": {
+            "requirement": "required"
+        },
+        "process_id": {
+            "requirement": "required"
+        },
+        "process_image_path": {
+            "requirement": "recommended"
+        }
+    }
+}
