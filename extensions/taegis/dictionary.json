@@ -53,6 +53,22 @@
                 }
             }
         },
+        "event_time_usec": {
+            "caption": "Event Time",
+            "description": "The time of the event in microseconds since the epoch.",
+            "type": "long_t",
+            "requirement": "required"
+        },
+        "host_id": {
+            "caption": "Host ID",
+            "description": "Unique identifier for the host where the event originated; preferably a uuid.",
+            "type": "string_t"
+        },
+        "ingest_time_usec": {
+            "caption": "Ingest Time",
+            "description": "The time the event was ingested in microseconds since the epoch.",
+            "type": "long_t"
+        },
         "ioc_events": {
             "caption": "IOC Events",
             "description": "The list of IOC events associated with the event.",
@@ -87,7 +103,7 @@
         },
         "original_data": {
             "caption": "Original Data",
-            "description": "The original data associated with the event.",
+            "description": "Original, unadulterated data prior to any transformation.",
             "type": "string_t"
         },
         "primary_ttp": {
@@ -188,6 +204,31 @@
             "description": "The target process associated with the event.",
             "type": "process"
         },
+        "sensor_cpe": {
+            "caption": "Sensor CPE",
+            "description": "The Common Platform Enumeration (CPE) identifier for the sensor.",
+            "type": "string_t"
+        },
+        "sensor_event_id": {
+            "caption": "Sensor Event ID",
+            "description": "Event ID of original_data assigned by the sensor.",
+            "type": "string_t"
+        },
+        "sensor_id": {
+            "caption": "Sensor ID",
+            "description": "redcloak-agent-id, iSensor Dev IP.",
+            "type": "string_t"
+        },
+        "sensor_tenant": {
+            "caption": "Sensor Tenant",
+            "description": "Ex: redloak-domain, ctp-client-id",
+            "type": "string_t"
+        },
+        "sensor_version": {
+            "caption": "Sensor Version",
+            "description": "The version of the sensor that generated the event.",
+            "type": "string_t"
+        },
         "tenant_id": {
             "caption": "Taegis Platform Tenant ID",
             "description": "The ID of the Taegis platform tenant associated with this event.",
@@ -226,6 +267,11 @@
             "description": "The time of the event in nanoseconds since the epoch.",
             "type": "timestamp_nanos_t",
             "requirement": "required"
+        },
+        "visibility": {
+            "caption": "Visibility",
+            "description": "The visibility of the event.",
+            "type": "string_t"
         }
     },
     "types": {

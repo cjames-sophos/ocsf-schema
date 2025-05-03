@@ -4,24 +4,24 @@
     "extends": "taegis_base_event",
     "name": "taegis_host_event",
     "attributes": {
-        "event_time_fidelity": {
-            "group": "occurrence",
-            "requirement": "optional"
-        },
-        "resource_id": {
-            "group": "context",
+        "host_id": {
+            "group": "primary",
             "requirement": "required"
         },
         "process_correlation_id": {
-            "requirement": "required"
+            "group": "primary",
+            "requirement": "recommended"
         },
         "process_create_time_usec": {
-            "requirement": "required"
+            "group": "primary",
+            "requirement": "recommended"
         },
         "process_id": {
-            "requirement": "required"
+            "group": "primary",
+            "requirement": "recommended"
         },
         "process_image_path": {
+            "group": "primary",
             "requirement": "recommended"
         }
     }

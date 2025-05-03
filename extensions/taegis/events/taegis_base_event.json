@@ -50,13 +50,65 @@
                 }
             }
         },
+        "event_time_usec": {
+            "group": "occurrence",
+            "requirement": "required"
+        },
+        "event_time_fidelity": {
+            "group": "occurrence",
+            "requirement": "optional"
+        },
+        "ingest_time_usec": {
+            "group": "occurrence",
+            "requirement": "optional"
+        },
+        "normalizer_version": {
+            "group": "classification",
+            "requirement": "required"
+        },
+        "normalizer_revision": {
+            "group": "classification",
+            "requirement": "required"
+        },
+        "original_data": {
+            "group": "classification",
+            "requirement": "recommended"
+        },
+        "resource_id": {
+            "group": "classification",
+            "requirement": "required"
+        },
+        "sensor_type": {
+            "group": "classification",
+            "requirement": "recommended"
+        },
+        "sensor_cpe": {
+            "group": "classification",
+            "requirement": "optional"
+        },
+        "sensor_event_id": {
+            "group": "classification",
+            "requirement": "optional"
+        },
+        "sensor_tenant": {
+            "group": "classification",
+            "requirement": "recommended"
+        },
         "severity_id": {
             "group": "classification",
             "requirement": "required"
         },
+        "sensor_version": {
+            "group": "classification",
+            "requirement": "recommended"
+        },
         "type_uid": {
             "group": "classification",
             "requirement": "required"
+        },
+        "visibility": {
+            "group": "classification",
+            "requirement": "optional"
         }
     },
     "profiles": [
