@@ -1,0 +1,33 @@
+{
+    "caption": "Sophos Endpoint Detection Atributes",
+    "description": "Sophos specific detection attributes for endpoint-based detections.",
+    "extends": "object",
+    "name": "sophos_endpoint_detection",
+    "attributes": {
+        "insights": {
+            "group": "primary",
+            "description": "Interesting facts about source process, e.g. Unsigned, Suspicious_Execution_Path, Persistence_Context.",
+            "requirement": "optional"
+        },
+        "context_summary": {
+            "group": "primary",
+            "description": "Interesting facts about source process execution context, e.g. viaAutoStart, viaDllSideload.",
+            "requirement": "optional"
+        },
+        "detection_type": {
+            "group": "primary",
+            "description": "The type of the detection, or detector, e.g. Behavioral, VDL, HMPA, AMSI.",
+            "requirement": "recommended"
+        },
+        "indicator_type": {
+            "group": "primary",
+            "description": "The type of threat indicator that triggered the detection, e.g. LOLBIN, Low_Rep, Recently_Written.",
+            "requirement": "recommended"
+        },
+        "threat_type": {
+            "group": "primary",
+            "description": "The type of the detector, e.g. Malware, PUA, App.",
+            "requirement": "recommended"
+        }
+    }
+}

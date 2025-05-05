@@ -8,6 +8,11 @@
             "description": "The lineage of the process, represented by a list of paths for each ancestor process.",
             "type": "process_lineage"
         },
+        "context_summary": {
+            "caption": "Context Summary",
+            "description": "A summary of the context in which the event occurred.",
+            "type": "string_t"
+        },
         "destination_address": {
             "caption": "Destination Address",
             "description": "The destination IP address associated with a network endpoint.",
@@ -19,10 +24,32 @@
             "type": "json_t",
             "is_array": true
         },
+        "evidences": {
+            "caption": "Evidence Artifacts",
+            "description": "A collection of evidence artifacts associated to the activity/activities that triggered a finding. See specific usage.",
+            "type": "evidences",
+            "is_array": true
+        },
+        "detection_context": {
+            "caption": "Detection Contexts",
+            "description": "Interesting facts about source process execution context, e.g. viaAutoStart, viaDllSideload.",
+            "type": "string_t",
+            "is_array": true
+        },
+        "detection_type": {
+            "caption": "Detection Type",
+            "description": "The type of the detection, or detector, e.g. Behavioral, VDL, HMPA, AMSI.",
+            "type": "string_t"
+        },
         "depth": {
             "caption": "Depth",
             "description": "The depth of the process in the process lineage (e.g.)",
             "type": "integer_t"
+        },
+        "device": {
+            "caption": "Device",
+            "description": "An addressable device, computer system or host.",
+            "type": "device"
         },
         "download_url": {
             "caption": "Source URL",
@@ -64,10 +91,21 @@
             "description": "Unique identifier for the host where the event originated; preferably a uuid.",
             "type": "string_t"
         },
+        "indicator_type": {
+            "caption": "Indicator Type",
+            "description": "The type of indicator associated with the event.",
+            "type": "string_t"
+        },
         "ingest_time_usec": {
             "caption": "Ingest Time",
             "description": "The time the event was ingested in microseconds since the epoch.",
             "type": "long_t"
+        },
+        "insights": {
+            "caption": "Insights",
+            "description": "Interesting facts about source process, e.g. Unsigned, Suspicious_Execution_Path, Persistence_Context.",
+            "type": "string_t",
+            "is_array": true
         },
         "ioc_events": {
             "caption": "IOC Events",
@@ -184,6 +222,11 @@
             "description": "The source IP address associated with a network endpoint.",
             "type": "string_t"
         },
+        "sophos_ep": {
+            "caption": "Sophos Endpoint Detection Attributes.",
+            "description": "Specific detection attributes coming from Sophos endpoints.",
+            "type": "sophos_endpoint_detection"
+        },
         "sophos_pid": {
             "caption": "Sophos Process ID",
             "description": "The Sophos process ID associated with the event.",
@@ -262,11 +305,21 @@
             "sibling": "threat_source_id",
             "type": "string_t"
         },
+        "threat_type": {
+            "caption": "Threat Type",
+            "description": "The type of threat associated with the event.",
+            "type": "string_t"
+        },
         "time_nanos": {
             "caption": "Event Time in Nanoseconds",
             "description": "The time of the event in nanoseconds since the epoch.",
             "type": "timestamp_nanos_t",
             "requirement": "required"
+        },
+        "vendor_attributes": {
+            "caption": "Vendor Attributes",
+            "description": "The Vendor Attributes object can be used to represent values of attributes populated by the Vendor/Finding Provider. It can help distinguish between the vendor-prodvided values and consumer-updated values, of key attributes like <code>severity_id</code>.<br>The original finding producer should not populate this object. It should be populated by consuming systems that support data mutability.",
+            "type": "vendor_attributes"
         },
         "visibility": {
             "caption": "Visibility",

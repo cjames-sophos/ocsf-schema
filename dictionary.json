@@ -1542,6 +1542,11 @@
       "description": "The name of the type of data security tool or system that the finding, detection, or alert originated from. E.g., Endpoint, Secure Email Gateway, etc.",
       "type": "string_t"
     },
+    "detection_type": {
+      "caption": "Detection Type",
+      "description": "The type of detection. E.g., Rule, Signature, Heuristic, etc.",
+      "type": "string_t"
+    },
     "detection_system_id": {
       "caption": "Detection System ID",
       "description": "The type of data security tool or system that the finding, detection, or alert originated from.",

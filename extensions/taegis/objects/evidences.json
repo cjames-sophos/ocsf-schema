@@ -1,0 +1,48 @@
+{
+    "caption": "Evidence Artifacts",
+    "description": "A collection of evidence artifacts associated to the activity/activities that triggered a security detection.",
+    "extends": "object",
+    "name": "evidences",
+    "attributes": {
+        "data": {
+            "description": "Additional evidence data that is not accounted for in the specific evidence attributes.<code> Use only when absolutely necessary.</code>",
+            "requirement": "optional"
+        },
+        "file": {
+            "description": "Describes details about the file associated to the activity that triggered the detection.",
+            "requirement": "recommended"
+        },
+        "job": {
+            "description": "Describes details about the scheduled job that was associated with the activity that triggered the detection.",
+            "requirement": "recommended"
+        },
+        "process": {
+            "description": "Describes details about the process associated to the activity that triggered the detection.",
+            "requirement": "recommended"
+        },
+        "script": {
+            "description": "Describes details about the script that was associated with the activity that triggered the detection.",
+            "requirement": "recommended"
+        },
+        "url": {
+            "description": "The URL object that pertains to the event or object associated to the activity that triggered the detection.",
+            "requirement": "recommended"
+        },
+        "user": {
+            "description": "Describes details about the user that was the target or somehow else associated with the activity that triggered the detection.",
+            "requirement": "recommended"
+        }
+    },
+    "constraints": {
+        "at_least_one": [
+            "api",
+            "data",
+            "file",
+            "process",
+            "url",
+            "user",
+            "job",
+            "script"
+        ]
+    }
+}
